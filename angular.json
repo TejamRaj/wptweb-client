@@ -62,7 +62,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wptweb-client:build"
+            "browserTarget": "wptweb-client:build",
+            "sslKey": "privatekey.key",
+            "sslCert": "certificate.pem"
           },
           "configurations": {
             "production": {
