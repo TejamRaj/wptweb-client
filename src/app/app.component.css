@@ -1,0 +1,38 @@
+.card { 
+  margin-bottom: 30px;
+}
+
+.card-img-top { 
+  height: 200px;
+}
+
+.card-footer {
+  padding: 0;
+  background: #fff;
+}
+
+.card-footer button {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+.d-flex{
+
+  margin-left:60px;
+}
+
+
+nav .navbar-nav li a{
+  color: #ffffff;
+  font-size: medium;
+  margin-right: 26px;
+  cursor: pointer;
+   
+}
+
+.navbar h2 {
+  color: #d7da07;
+}
+
+
