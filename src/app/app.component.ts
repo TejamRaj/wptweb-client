@@ -15,6 +15,8 @@ export class AppComponent {
 
    @Input() tourDestinations$;
 
+   @Input('userType') userType='Individual';
+
   constructor(
     private router:Router,
      private workplaces: WotService,
@@ -26,13 +28,15 @@ export class AppComponent {
 
 
 
-     RedirectToIDP(){
+     redirectToIDP($event){
+
+      let userType = $event.target.innerText;
       var path= window.location.pathname;
     
       if(path!="/signin-oidc"){
  
          if(!this.openIdConnectService.userAvailable)
-           this.openIdConnectService.triggerSignIn();
+           this.openIdConnectService.triggerSignIn(userType);
 
      }
   //  ngOnInit(){
