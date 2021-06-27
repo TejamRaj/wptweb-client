@@ -1,114 +1,22 @@
 
 
 
-<!--Naavbaar  bootstrap-->
+<!--Naavbaar  component-->
 
-<nav class="navbar toolbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid">
-    <img class="img-responsive"
-    width="100"
-    alt="Workplace On Tour Logo"
-    src="assets/wotimages/logo.png"
-  />
-  <h2>Explore ! Work ! Evolve !</h2>
-  <form class="d-flex ">
-    <input class="form-control me-2" type="search" placeholder="Search workplaces" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav  mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/workplaces-on-tour']">Home</a>
-        </li>
-        <li *ngIf='oidcClient.userAvailable' class="nav-item">
-          <a class="nav-link" [routerLink]="['/my-tour-workplaces']">MyBookings</a>
-        </li>
-        
-        
-        <li *ngIf='!oidcClient.userAvailable' class="nav-item">
-          <a class="nav-link" (click)="redirectToIDP($event)"> Individual</a>
-        </li>
-        <li *ngIf='!oidcClient.userAvailable' class="nav-item">
-          <a class="nav-link" (click)="redirectToIDP($event)">Organization </a>
-        </li>
-        <li *ngIf='!oidcClient.userAvailable' class="nav-item">
-          <a class="nav-link" (click)="redirectToIDP($event)"> Workplace Provider</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/about']">About</a>
-       </li>
 
-       <li *ngIf='oidcClient.userAvailable' class="nav-item">
-        <a class="nav-link" (click)="oidcClient.triggerSignOut()">Sign Out</a>
-      </li>
-                
-    </ul>
-      
-    </div>
-  </div>
-</nav>
+<!--Naavbaar  component-->
 
+
+<app-naavbar></app-naavbar>
 <!--Naavbaar  bootstrap-->
 
 <!-- Toolbar -->
 
+<div class="content container-fluid" role="main">
 
-<div class="content" role="main">
-
- <div class="row">
-
-  <div class="col-md-8 col-lg-6 col-sm-4  img-responsive">
-    <img class="img-responsive" 
-    src="https://redsoilrockstorage.blob.core.windows.net/wotassets/Landingpage.svg.png">
-    <h2>Explore ! Work ! Evolve :)</h2>
-   </div>
-
-  <div class="col-md-4 col-lg-6 col-sm-8">
-    <!-- Highlight Card -->
-  <div *ngFor="let workplace of tourDestinations$ | async" class="card highlight-card width:">
-
-    <div *ngIf="workplace.name" class="card">
-      
-      <img *ngIf="workplace.coverPhotoUrl" class="card-img-top" [src]="workplace.coverPhotoUrl" alt="{{ workplace.coverPhotoUrl }}">
-      <div class="card-body">
-        <h4 class="card-title">{{ workplace.name }}</h4>
-        <p class="card-text blockquote">{{ workplace.details }}</p>
-      </div>
-      <div class="card-footer">
-        <div class="col-md-4 col-sm-4">
-          Popularity-Rating {{workplace.popularityRating}}
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <a [routerLink]="['/workplaces-on-tour', workplace.tourId]"
-          class="btn btn-primary btn-block">
-          Explore More
-        </a>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <button (click)="bookWorkplace()"
-          class="btn btn-primary btn-block">Book Workplace
-        </button> 
-        </div>        
-         
-      </div>
-    </div>
-   
-  </div>
+   <router-outlet></router-outlet>
   
- </div>
-   
 
- 
-
-   
- 
-  
-</div>
-
- 
   <!-- Footer -->
   <footer>
       

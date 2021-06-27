@@ -14,7 +14,11 @@ export class WotService extends BaseService {
     TourDestinations$;
 
    getTourDestinations(){
-      return this.http.get(`${this.apiUrl}/Wot`)
+      return this.http.get(`${this.apiUrl}/Wot`);
     
+   }
+
+   getWorkPlaces(TourId){
+     return this.http.get(`${this.apiUrl}/Wot`,TourId);
    }
 }

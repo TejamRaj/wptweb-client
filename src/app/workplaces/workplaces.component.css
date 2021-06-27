@@ -1,0 +1,79 @@
+.card { 
+    margin-bottom: 30px;
+  }
+  
+  .card-img-top { 
+    height: 200px;
+  }
+  
+  .card-footer {
+    padding: 0;
+    background: #fff;
+  }
+  
+  .card-footer button {
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  
+  .d-flex{
+  
+    margin-left:60px;
+  }
+
+  .btn-outline-success {
+    color: #faf5f5;
+    border-color: #c6d2cd;
+  }
+  
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column; 
+  }
+
+  .btn {
+    background-color: #0cbc6a;
+    font-size: large;
+}
+
+.wot-heading h1 {
+  font-family: inherit;
+  font-weight: 300;
+  font-style: italic;
+  color: #5c6704;
+  padding-left: 40px; 
+  font-size: xx-large;
+  padding-bottom: 10px;
+}
+
+
+
+p {
+    margin: 50px;
+    font-size: large;
+    font-style: italic;
+    font-family: inherit;
+    color: #788864;
+    font-weight: 400;
+}
+
+
+element.style {
+}
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: 0.875em;
+    font-size: large;
+    font-family: inherit;
+    font-style: italic;
+    color: #788864;
+    background: transparent;
+    border: none;
+}

@@ -1,0 +1,84 @@
+  
+  
+<div class="row wot-heading">
+
+  <div class="col-md-7 col-lg-7 col-sm-5  img-responsive">
+    
+    <h1> &nbsp;&nbsp;  Let’s break this paradox.. Work from Home ? or work from office?  
+      <br>
+      <br>
+      
+      Re-imagine future of “work culture “in the earth sized single workplace("WoT"). 
+      
+    </h1>
+    <img class="img-responsive" 
+    src="https://redsoilrockstorage.blob.core.windows.net/wotassets/Landingpage.svg.png">
+
+    <p>
+      &nbsp; &nbsp; Workplace on Tour(“WoT”) would be a next generation business (or commercial) work platform 
+      which offers remote workplace in tourist destination areas across the globe.
+      <br>
+      <br>
+
+It will allow people (formally employees) to book a workplace for 3-4 weeks of time [may be more] in tour destinations areas,
+enable them to explore their favourite places in between their weekly off schedule, 
+do exciting activities like boat sailing, river rafting, sky diving   etc. [I named few].
+<br>
+<br>
+Enabling such way of ‘work style’ in modern [gig economy] world would be a game changing move to get over office/home anxiety, work pressure. and tackle people well being challenge.
+
+It will also open countless opportunities in straightening world business economy.
+<br>
+<br>
+ And yes, all this possible with the power of cloud computing which redefined morden Business landscape.
+ <br>
+ <br>
+ <br>
+</p>
+ <pre>
+                                                   Workplace On Tour Prototype ("WoT"),                                       
+                                                       by Rajendra[Team :RedSoilNerd] :) 
+  </pre> 
+    
+    
+   </div>
+
+  <div class="col-md-4 col-lg-4 col-sm-6">
+    <!-- Highlight Card -->
+  <div *ngFor="let workplace of tourDestinations$ | async" class="card highlight-card width:">
+
+       <div *ngIf="workplace.name" class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+           <img *ngIf="workplace.coverPhotoUrl" class=" img-responsive" [src]="workplace.coverPhotoUrl" alt="{{ workplace.coverPhotoUrl }}">
+        </div>
+        <div class="card-block px-2">
+        <h4 class="card-title">{{ workplace.name }}</h4>
+        <p class="card-text blockquote">{{ workplace.details }}</p>
+        <a class="b">Popularity-Rating {{workplace.popularityRating}}</a>
+      </div>
+      
+      <div class="card-body">
+        <a [routerLink]="['/workplaces', workplace.tourId]"
+        class="btn btn-primary btn-block">
+        Explore More
+      </a>
+      <a (click)="bookWorkplace()"
+        class="btn btn-primary btn-block">
+        Book workplace
+      </a>
+     
+      </div>
+        
+
+    </div>
+   
+  </div>
+
+  <div class="col-md-1 col-lg-1 col-sm-1" >
+
+  </div>
+  
+ </div>
+   
+</div>
+

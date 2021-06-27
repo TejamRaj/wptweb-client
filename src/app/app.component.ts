@@ -15,39 +15,26 @@ export class AppComponent {
 
    @Input() tourDestinations$;
 
-   @Input('userType') userType='Individual';
+
 
   constructor(
     private router:Router,
      private workplaces: WotService,
     private openIdConnectService: OidConnectService) {
 
+      this.router.navigate(['/workplaces']);
       this.tourDestinations$= this.workplaces.getTourDestinations() 
     this.oidcClient=openIdConnectService;
   }
 
 
 
-     redirectToIDP($event){
-
-      let userType = $event.target.innerText;
-      var path= window.location.pathname;
-    
-      if(path!="/signin-oidc"){
- 
-         if(!this.openIdConnectService.userAvailable)
-           this.openIdConnectService.triggerSignIn(userType);
-
-     }
+     
   //  ngOnInit(){
 
       
   //  }
-  }
-
-
- 
-
+  
   bookWorkplace(){
     this.router.navigate(['/workplacebooking']);
   }

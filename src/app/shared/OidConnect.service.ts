@@ -1,3 +1,4 @@
+import { HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserManager,User } from 'oidc-client';
 import { ReplaySubject } from 'rxjs';
@@ -52,8 +53,14 @@ export class OidConnectService {
 
   
 
-  triggerSignIn() {
-    this.userManager.signinRedirect().then(function () {
+  triggerSignIn(userKind?) {
+
+    userKind = typeof userKind !== 'undefined' ? userKind : 'Individual';
+    this.userManager.signinRedirect({
+        extraQueryParams: {
+          userType:userKind
+        },
+    }).then(function () {
       if (!environment.production) {
         console.log('Redirection to signin triggered.');
       }

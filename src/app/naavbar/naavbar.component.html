@@ -1,0 +1,48 @@
+<nav class="navbar  navbar-expand-lg fixed-top ">
+    <div class="container-fluid">
+      <img class="img-responsive"
+      width="100"
+      alt="Workplace On Tour Logo"
+      src="assets/wotimages/logo.png"
+    />
+    <h2>Explore ! Work ! Evolve !</h2>
+    <form class="d-flex ">
+      <input class="form-control me-2" type="search" placeholder="Search workplaces" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/workplaces']">Home</a>
+          </li>
+          <li *ngIf='oidcClient.userAvailable' class="nav-item">
+            <a class="nav-link" [routerLink]="['/my-tour-workplaces']">MyBookings</a>
+          </li>
+          
+          
+          <li *ngIf='!oidcClient.userAvailable' class="nav-item">
+            <a class="nav-link" (click)="redirectToIDP($event)"> Individual</a>
+          </li>
+          <li *ngIf='!oidcClient.userAvailable' class="nav-item">
+            <a class="nav-link" (click)="redirectToIDP($event)">Organization </a>
+          </li>
+          <li *ngIf='!oidcClient.userAvailable' class="nav-item">
+            <a class="nav-link" (click)="redirectToIDP($event)"> Workplace Provider</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about']">About</a>
+         </li>
+  
+         <li *ngIf='oidcClient.userAvailable' class="nav-item">
+          <a class="nav-link" (click)="oidcClient.triggerSignOut()">Sign Out</a>
+        </li>
+                  
+      </ul>
+        
+      </div>
+    </div>
+  </nav>
+  
