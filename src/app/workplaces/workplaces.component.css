@@ -42,7 +42,7 @@
 
 .wot-heading h1 {
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: #5c6704;
   padding-left: 40px; 
@@ -57,23 +57,31 @@ p {
     font-size: large;
     font-style: italic;
     font-family: inherit;
-    color: #788864;
+    color: #8a4204;
     font-weight: 400;
 }
 
 
-element.style {
-}
+
 pre {
     display: block;
     margin-top: 0;
     margin-bottom: 1rem;
-    overflow: auto;
+    overflow: hidden;
     font-size: 0.875em;
     font-size: large;
     font-family: inherit;
     font-style: italic;
-    color: #788864;
+    color: #a95106;
     background: transparent;
     border: none;
+}
+
+
+
+
+h4.card-title {
+    font-family: cursive;
+    font-size: x-large;
+    color: #d25105;
 }

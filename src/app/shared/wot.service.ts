@@ -9,7 +9,7 @@ export class WotService extends BaseService {
 
   constructor(private http: HttpClient) { 
     super();
-  }
+  } 
 
     TourDestinations$;
 
@@ -18,7 +18,5 @@ export class WotService extends BaseService {
     
    }
 
-   getWorkPlaces(TourId){
-     return this.http.get(`${this.apiUrl}/Wot`,TourId);
-   }
+  
 }

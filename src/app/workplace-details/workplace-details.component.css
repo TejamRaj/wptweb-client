@@ -1,0 +1,89 @@
+.card { 
+    margin-bottom: 30px;
+  }
+  
+  .card-img-top { 
+    height: 300px;
+  }
+  
+  .card-footer {
+    padding: 0;
+    background: #fff;
+  }
+  
+  .btn {
+    background-color: #0cbc6a;
+    font-size: large;
+}
+
+
+.card-text{  
+    font-size: 18px;
+    color: #d64141;
+    font-weight: 400;
+}
+
+
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    font-size: 0.875em;
+    font-size: large;
+    font-family: inherit;
+    font-style: italic;
+    color: #a95106;
+    background: transparent;
+    border: none;
+}
+
+
+p {
+    margin: 14px;
+    font-size: 52px;
+    font-style: initial;
+    font-family: inherit;
+    color: #6bc30a;
+    font-weight: 800;
+}
+
+
+h4{
+    margin-left: 7px;
+    color: #818305;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+ul li {
+    margin-left: 29px;
+    line-height: 2;
+    font-size: 10px;
+    font-family: inherit;
+    font-size: 17px;
+    list-style: auto;
+    color: #635643;
+    font-weight: 600;
+}
+
+
+
+element.style {
+}
+.workplace-activity {
+    font-family: cursive;
+    margin: 58px;
+    color: #e16c6c;
+    font-size: 38px;
+}
+
+.workplace-activity p {
+    color: #606a07;
+    font-size: 25px;
+    font-family: cursive;
+    font-style: oblique;
+    font-weight: 400;
+}

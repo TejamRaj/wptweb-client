@@ -13,6 +13,8 @@ import { WorkplacebookingComponent } from './workplacebooking/workplacebooking.c
 import { HttpClientModule } from '@angular/common/http';
 import { NaavbarComponent } from './naavbar/naavbar.component';
 import { AboutComponent } from './about/about.component';
+import { WorkplaceDetailsComponent } from './workplace-details/workplace-details.component';
+import { WorkplaceService } from './shared/workplace.service';
 
 
 
@@ -24,7 +26,8 @@ import { AboutComponent } from './about/about.component';
     MyTourWorkplacesComponent,
     WorkplacebookingComponent,
     NaavbarComponent,
-    AboutComponent
+    AboutComponent,
+    WorkplaceDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import { AboutComponent } from './about/about.component';
 
   ],
   providers: [OidConnectService,
-  RequireAuthenticatedUserRouteGuardService,WotService],
+  RequireAuthenticatedUserRouteGuardService,
+  WotService,
+  WorkplaceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

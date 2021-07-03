@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/ff89ee3b-3e04-45b6-9e35-79ed49b9ab22/resourceGroups/WOT-ADL-FrontEnd/providers/Microsoft.Web/sites/wot",
+    "appService.deploySubpath": "dist"
+}

@@ -36,8 +36,8 @@ It will also open countless opportunities in straightening world business econom
  <br>
 </p>
  <pre>
-                                                   Workplace On Tour Prototype ("WoT"),                                       
-                                                       by Rajendra[Team :RedSoilNerd] :) 
+                                                                     Workplace On Tour("WoT") Prototype,                                       
+                                                                       by Rajendra[Team :RedSoilNerd] :) 
   </pre> 
     
     
@@ -58,11 +58,11 @@ It will also open countless opportunities in straightening world business econom
       </div>
       
       <div class="card-body">
-        <a [routerLink]="['/workplaces', workplace.tourId]"
+        <a [routerLink]="['/workplace-details', workplace.tourId]"
         class="btn btn-primary btn-block">
         Explore More
       </a>
-      <a (click)="bookWorkplace()"
+      <a [routerLink]="['/workplace-details', workplace.tourId]"
         class="btn btn-primary btn-block">
         Book workplace
       </a>

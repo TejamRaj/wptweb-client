@@ -22,8 +22,7 @@ export class AppComponent {
      private workplaces: WotService,
     private openIdConnectService: OidConnectService) {
 
-      this.router.navigate(['/workplaces']);
-      this.tourDestinations$= this.workplaces.getTourDestinations() 
+      this.router.navigate(['/workplaces']);  
     this.oidcClient=openIdConnectService;
   }
 

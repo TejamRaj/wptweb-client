@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-4">
+
+    <div>
+    <p> Explore beauty of Goa along with your work :)</p>
+
+
+    <br>
+    <br>
+    <h4>We provide below services And facilities</h4>    
+    <ul>
+      <li>WiFi + LAN Coonection + 2 LED Desktops</li>
+      <li>Office Room + Bed Room</li>
+      <li>Swimming Pool</li>
+      <li>club houes And Gym</li>
+    </ul>
+
+    <div class="workplace-activity">
+      What you can do on weekends :)
+
+      <p> Horse riding <br>
+        
+        sky diving <br>
+         tide surfing <br>
+        river rafting and many more </p>
+    </div>
+   </div>
+
+   <div>
+    <p></p>
+   </div>
+   <div>
+    <p></p>
+   </div>
+   <div>
+    <p></p>
+   </div>
+  </div>
+  <div class="col col-md-8 col-sm-8">
+    <div class="row">
+        <ng-container *ngFor="let workplace of workplaces; let i = index">
+          <div class="col">
+            <div *ngIf="workplace.title" class="card">
+              <img *ngIf="workplace.workplacePhotoUrl" class="card-img-top" [src]="workplace.workplacePhotoUrl" alt="{{ workplace.workplacePhotoUrl }}">
+              <div class="card-body">
+
+                <h4 class="card-title">{{ workplace.title }}</h4>
+                <h4 class="card-title">{{ workplace.address }}</h4>
+                <p class="card-text">{{ workplace.rate | currency:'INR':true }}</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary btn-block">Book this workplace</a>
+              </div>
+            </div>  
+          </div>
+          <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+        </ng-container>
+      </div>
+  </div>
+</div>
+
